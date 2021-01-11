@@ -1,12 +1,50 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 #navbar {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   top: 0;
+  left: 0;
+  background: #364573;
+}
+
+#navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+}
+
+#navbar li {
+  margin: 1em;
+}
+
+#navbar a {
+  text-decoration: none;
+}
+
+#navbar a:link, #navbar a:visited {
+  color: #f2f1eb;
+}
+
+#navbar a:hover {
+  color: #d6d300;
 }
 
 #welcome-section {
   height: 100vh;
 }
-
-@media screen and (max-width: 1000px) {
-}
+/*# sourceMappingURL=style.css.map */
