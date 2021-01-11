@@ -1,8 +1,10 @@
 $primary-color: rgb(22, 39, 89);
 $secondary-color: rgb(54, 69, 115);
-$highlight-color: rgb(214, 211, 0);
+$highlight-color: rgb(235, 231, 2);
 $light-color: rgb(242, 241, 235);
 $hover-color: rgb(168, 174, 191);
+
+$primary-font: 'Montserrat', sans-serif;
 
 html {
   box-sizing: border-box;
@@ -13,12 +15,18 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  font-family: $primary-font;
+}
+
 #navbar {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   background: $secondary-color;
+  font-size: 1.1em;
+  font-weight: 300;
 
   ul {
     display: flex;
@@ -32,14 +40,45 @@ html {
 
   a {
     text-decoration: none;
+    text-transform: uppercase;
     &:link,
     &:visited {
       color: $light-color;
+      -webkit-transition: color 0.2s ease-in-out;
+      transition: color 0.2s ease-in-out;
     }
     &:hover {
       color: $highlight-color;
+      -webkit-transition: color 0.4s ease-in-out;
+      transition: color 0.4s ease-in-out;
     }
   }
+}
+
+// setting position to relative so I can absolute-position the child classes
+.nav-item {
+  position: relative;
+}
+
+.nav–link:active:after,
+.nav-link:focus:after,
+.nav-link:hover:after,
+.nav-link:visited:after {
+  width: calc(100% - 0.2em);
+  opacity: 0.6;
+}
+
+.nav-link:after {
+  content: '';
+  height: 0.2rem;
+  background: $light-color;
+  position: absolute;
+  left: 0.1rem;
+  bottom: -0.5rem;
+  opacity: 0;
+  width: 0;
+  transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+    opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #welcome-section {

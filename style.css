@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,12 +11,18 @@ html {
           box-sizing: inherit;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 #navbar {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   background: #364573;
+  font-size: 1.1em;
+  font-weight: 300;
 }
 
 #navbar ul {
@@ -34,14 +41,44 @@ html {
 
 #navbar a {
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 #navbar a:link, #navbar a:visited {
   color: #f2f1eb;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 #navbar a:hover {
-  color: #d6d300;
+  color: #ebe702;
+  -webkit-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav–link:active:after,
+.nav-link:focus:after,
+.nav-link:hover:after,
+.nav-link:visited:after {
+  width: calc(100% - 0.2em);
+  opacity: 0.6;
+}
+
+.nav-link:after {
+  content: '';
+  height: 0.2rem;
+  background: #f2f1eb;
+  position: absolute;
+  left: 0.1rem;
+  bottom: -0.5rem;
+  opacity: 0;
+  width: 0;
+  -webkit-transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #welcome-section {
