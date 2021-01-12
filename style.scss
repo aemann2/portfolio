@@ -15,8 +15,10 @@ html {
   box-sizing: inherit;
 }
 
+// zeroing margin so sections will fill to screen edge
 body {
   font-family: $primary-font;
+  margin: 0;
 }
 
 #navbar {
@@ -83,6 +85,65 @@ body {
 
 #welcome-section {
   height: 100vh;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: $primary-color;
+  height: 20em;
+  width: 100%;
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    margin-right: 2em;
+  }
+}
+
+#contact-info {
+  text-align: center;
+  position: absolute;
+  bottom: 1em;
+  left: 4em;
+  color: $light-color;
+  font-size: 1.5em;
+}
+
+.contact-img {
+  width: 10em;
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.custom-shape-divider-top-1610406725 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1610406725 svg {
+  position: relative;
+  display: block;
+  width: calc(261% + 1.3px);
+  height: 164px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1610406725 .shape-fill {
+  fill: #ffffff;
 }
 
 @media screen and (max-width: 1000px) {
