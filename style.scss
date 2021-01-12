@@ -70,17 +70,8 @@ body {
   opacity: 0.6;
 }
 
-.nav-link:after {
-  content: '';
-  height: 0.2rem;
-  background: $light-color;
-  position: absolute;
-  left: 0.1rem;
-  bottom: -0.5rem;
-  opacity: 0;
-  width: 0;
-  transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
-    opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+.icon {
+  display: none;
 }
 
 #welcome-section {
@@ -146,5 +137,50 @@ footer {
   fill: #ffffff;
 }
 
-@media screen and (max-width: 1000px) {
+// navbar animation
+
+@media only screen and (min-width: 500px) {
+  .nav-link:after {
+    content: '';
+    height: 0.2rem;
+    background: $light-color;
+    position: absolute;
+    left: 0.1rem;
+    bottom: -0.5rem;
+    opacity: 0;
+    width: 0;
+    transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+      opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+
+// hamburger menu
+
+@media only screen and (max-width: 500px) {
+  #navbar {
+    position: relative;
+    text-align: center;
+
+    ul {
+      display: none;
+    }
+
+    a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  }
+
+  #nav-links {
+    padding-bottom: 1em;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.2em;
+    margin-left: 0.6em;
+    font-size: 3.5em;
+  }
 }

@@ -11,6 +11,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="manifest" href="favicon_io/site.webmanifest">
   <link rel="stylesheet" href="style.css">
   <title>Adam Mann's Portfolio</title>
@@ -19,7 +20,10 @@
 <body>
   <header>
     <nav id="navbar">
-      <ul>
+      <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <ul id="nav-links">
         <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
         <li class="nav-item"><a href="#welcome-section" class="nav-link">Welcome</a></li>
         <li class="nav-item"><a href="google.com" class="nav-link">About</a></li>
@@ -67,6 +71,16 @@
             alt="HTML tutorial"></a></li>
     </ul>
   </footer>
+  <script>
+    function navFunction() {
+      var x = document.getElementById("nav-links");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
 </body>
 
 </html>
