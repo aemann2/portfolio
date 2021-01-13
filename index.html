@@ -20,7 +20,7 @@
 <body>
   <header>
     <nav id="navbar">
-      <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+      <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
         <i class="fa fa-bars"></i>
       </a>
       <ul id="nav-links">
@@ -32,7 +32,13 @@
     </nav>
   </header>
   <section id="welcome-section">
-    <h1>Placeholder text</h1>
+    <div id="welcome-left">
+      <img src="./images/self.jpeg" alt="A picture of Adam Mann">
+    </div>
+    <div id="welcome-right">
+      <h1>Hello, I'm Adam.</h1>
+      <h2>(future front-end developer)</h2>
+    </div>
   </section>
   <section id="projects">
     <h2>Projects</h2>
@@ -72,14 +78,24 @@
     </ul>
   </footer>
   <script>
-    function navFunction() {
-      var x = document.getElementById("nav-links");
-      if (x.style.display === "block") {
-        x.style.display = "none";
+    const navLinks = document.getElementById("nav-links");
+
+    function hamburgerMenu() {
+      if (navLinks.style.display === "block") {
+        navLinks.style.display = "none";
       } else {
-        x.style.display = "block";
+        navLinks.style.display = "block";
       }
     }
+
+    function restoreNav() {
+      if (window.innerWidth > 500) {
+        navLinks.style.display = "flex";
+      } else navLinks.style.display = "none";
+    };
+
+    window.addEventListener("resize", restoreNav);
+
   </script>
 </body>
 

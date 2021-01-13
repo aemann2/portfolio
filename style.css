@@ -2,6 +2,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -14,6 +15,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
+  background-color: #f2f1eb;
 }
 
 #navbar {
@@ -21,7 +23,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background: #364573;
+  opacity: 1;
   font-size: 1.1em;
   font-weight: 300;
 }
@@ -75,6 +77,50 @@ body {
 
 #welcome-section {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #162759;
+}
+
+#welcome-section #welcome-left {
+  width: 50%;
+}
+
+#welcome-section #welcome-left img {
+  float: left;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#welcome-section #welcome-right {
+  width: 50%;
+  color: #f2f1eb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#welcome-section #welcome-right h1 {
+  font-size: 4vw;
+}
+
+#welcome-section #welcome-right h2 {
+  font-size: 2vw;
+  margin-top: -2em;
+  margin-left: 2em;
 }
 
 footer {
@@ -147,7 +193,7 @@ footer li {
 }
 
 .custom-shape-divider-top-1610406725 .shape-fill {
-  fill: #ffffff;
+  fill: #f2f1eb;
 }
 
 @media only screen and (min-width: 500px) {

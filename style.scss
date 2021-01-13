@@ -8,6 +8,7 @@ $primary-font: 'Montserrat', sans-serif;
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -19,6 +20,7 @@ html {
 body {
   font-family: $primary-font;
   margin: 0;
+  background-color: $light-color;
 }
 
 #navbar {
@@ -26,7 +28,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background: $secondary-color;
+  opacity: 1;
   font-size: 1.1em;
   font-weight: 300;
 
@@ -76,6 +78,38 @@ body {
 
 #welcome-section {
   height: 100vh;
+  display: flex;
+  background-color: $primary-color;
+
+  #welcome-left {
+    width: 50%;
+
+    img {
+      float: left;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+
+  #welcome-right {
+    width: 50%;
+    color: $light-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 4vw;
+    }
+
+    h2 {
+      font-size: 2vw;
+      margin-top: -2em;
+      margin-left: 2em;
+    }
+  }
 }
 
 footer {
@@ -115,6 +149,8 @@ footer {
   }
 }
 
+// footer swoop
+
 .custom-shape-divider-top-1610406725 {
   position: absolute;
   top: 0;
@@ -134,7 +170,7 @@ footer {
 }
 
 .custom-shape-divider-top-1610406725 .shape-fill {
-  fill: #ffffff;
+  fill: $light-color;
 }
 
 // navbar animation
