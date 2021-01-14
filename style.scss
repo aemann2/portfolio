@@ -1,5 +1,5 @@
 $primary-color: rgb(22, 39, 89);
-$secondary-color: rgb(54, 69, 115);
+$secondary-color: rgb(71, 111, 147);
 $highlight-color: rgb(235, 231, 2);
 $light-color: rgb(242, 241, 235);
 $hover-color: rgb(168, 174, 191);
@@ -42,8 +42,9 @@ body {
   left: 0;
   z-index: 100;
   opacity: 1;
-  font-size: 1.1em;
-  font-weight: 300;
+  font-size: 1.2em;
+  font-weight: 400;
+  mix-blend-mode: difference;
 
   ul {
     @extend %flex-end;
@@ -123,10 +124,13 @@ body {
 
 #projects {
   text-align: center;
-  margin-left: 3em;
+  padding-left: 3em;
+  background-color: $light-color;
 
   h2 {
     font-size: 5vw;
+    padding-top: 1em;
+    margin-top: 0;
     margin-bottom: 1.5em;
   }
 
@@ -172,7 +176,8 @@ body {
 
 .project-tile {
   display: flex;
-  margin-bottom: 5em;
+  padding-bottom: 8em;
+  margin-bottom: 0;
 }
 
 .desktop {
@@ -203,6 +208,120 @@ figcaption {
 .button-wrapper {
   display: flex;
   justify-content: space-evenly;
+}
+
+#about-me {
+  color: $light-color;
+  background: $secondary-color;
+  text-align: center;
+
+  h2 {
+    font-size: 5vw;
+    display: inline-block;
+  }
+
+  p {
+    font-size: 1.2em;
+    color: black;
+    display: inline-block;
+    margin: 13px;
+    padding: 8px;
+    transition: all 0.4s;
+    background-color: $light-color;
+
+    &:hover {
+      background-color: $hover-color;
+      transform: scale(1.1);
+    }
+  }
+
+  img {
+    width: 60%;
+    border-radius: 30%;
+    align-self: center;
+    margin: 1em 0;
+    transition: all 0.4s;
+
+    &:hover {
+      filter: grayscale(1);
+      transform: scale(1.1);
+    }
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  padding-bottom: 4em;
+}
+
+.blurb-wrapper {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 2em;
+  margin-right: -4em;
+  z-index: 2;
+}
+
+.image-wrapper {
+  background-color: $primary-color;
+  @extend %flex-center;
+  flex: 1;
+  margin-right: 4em;
+}
+
+#skills {
+  min-height: 20em;
+  margin-top: 4em;
+  text-align: center;
+
+  p {
+    font-size: 2em;
+  }
+
+  // resume button
+  button {
+    font-size: 2em;
+    background: $secondary-color;
+    color: $light-color;
+    border: 0.25rem solid $secondary-color;
+    padding: 0.85em 0.75em;
+    margin: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &:hover {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+
+    &.resume-button::after {
+      left: 0;
+      right: 0;
+      top: 100%;
+      bottom: -100%;
+      transition: all 0.35s;
+    }
+
+    &.resume-button:hover::after {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all 0.35s;
+    }
+
+    &::after {
+      content: '';
+      background: $light-color;
+      position: absolute;
+      z-index: -1;
+      padding: 0.85em 0.75em;
+      display: block;
+    }
+  }
 }
 
 footer {
