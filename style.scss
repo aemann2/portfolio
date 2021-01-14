@@ -6,6 +6,18 @@ $hover-color: rgb(168, 174, 191);
 
 $primary-font: 'Montserrat', sans-serif;
 
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-end {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -28,13 +40,13 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 100;
   opacity: 1;
   font-size: 1.1em;
   font-weight: 300;
 
   ul {
-    display: flex;
-    justify-content: flex-end;
+    @extend %flex-end;
     list-style: none;
   }
 
@@ -59,7 +71,7 @@ body {
   }
 }
 
-// setting position to relative so I can absolute-position the child classes
+// setting position to relative so I can absolute-position the child classes in the media query
 .nav-item {
   position: relative;
 }
@@ -85,7 +97,6 @@ body {
     width: 50%;
 
     img {
-      float: left;
       width: 100%;
       height: 100vh;
       object-fit: cover;
@@ -95,10 +106,8 @@ body {
   #welcome-right {
     width: 50%;
     color: $light-color;
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     h1 {
       font-size: 4vw;
@@ -112,11 +121,93 @@ body {
   }
 }
 
+#projects {
+  text-align: center;
+  margin-left: 3em;
+
+  h2 {
+    font-size: 5vw;
+    margin-bottom: 1.5em;
+  }
+
+  button {
+    color: $light-color;
+    border: none;
+    font-size: 1.2em;
+    padding: 14px 40px;
+    background-color: $secondary-color;
+    transition: all 0.5s;
+
+    .arrow-span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+
+      &:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        color: $highlight-color;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover span {
+      padding-right: 25px;
+    }
+
+    &:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  }
+}
+
+.project-tile {
+  display: flex;
+  margin-bottom: 5em;
+}
+
+.desktop {
+  width: 48%;
+  border: 8px solid black;
+  border-radius: 6px;
+  align-self: flex-end;
+  margin-right: 1em;
+}
+
+.mobile {
+  width: 10%;
+  border: 6px solid black;
+  border-radius: 6px;
+  align-self: flex-end;
+  margin-left: -8%;
+}
+
+figcaption {
+  flex-basis: 40%;
+  font-size: 1.3vw;
+  border: 4px solid black;
+  border-radius: 6px;
+  margin-left: 4em;
+  padding: 0 1em;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 footer {
   position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  @extend %flex-end;
   background: $primary-color;
   height: 20em;
   width: 100%;
