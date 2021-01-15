@@ -26,11 +26,12 @@
       <ul id="nav-links">
         <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
         <li class="nav-item"><a href="#welcome-section" class="nav-link">Welcome</a></li>
-        <li class="nav-item"><a href="google.com" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#about-me" class="nav-link">About</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
+
   <section id="welcome-section">
     <div id="welcome-left">
       <img src="./images/self.jpeg" alt="A picture of Adam Mann">
@@ -40,8 +41,10 @@
       <h2>(future front-end developer)</h2>
     </div>
   </section>
+
   <section id="projects">
     <h2>Projects</h2>
+
     <figure class="project-tile">
       <video class="desktop" autoplay loop>
         <source src="images/techdoc_desktop.mp4" type="video/mp4">
@@ -50,7 +53,8 @@
         <source src="images/techdoc_mobile.mp4" type="video/mp4">
       </video>
       <figcaption class="project-description">
-        <h3 class="project-name">Flexbox Documentation</h3>
+        <h3 class="project-name"><a target="_blank" href="https://aemann2.github.io/tech_doc/">Flexbox Documentation</a>
+        </h3>
         <p class="description-text">A layout reimagining of the CSS Tricks Flexbox documentation page. This page
           includes a side-nav that lets users easily navigate to any section of the document, as well as a two-column
           layout using flex-wrap. Also, dark mode--why not?</p>
@@ -65,6 +69,7 @@
         </div>
       </figcaption>
     </figure>
+
     <figure class="project-tile">
       <video class="desktop" autoplay loop>
         <source src="images/pizzabox_desktop.mp4" type="video/mp4">
@@ -73,7 +78,8 @@
         <source src="images/pizzabox_mobile.mp4" type="video/mp4">
       </video>
       <figcaption class="project-description">
-        <h3 class="project-name">Pizza Box Product Page</h3>
+        <h3 class="project-name"><a target="_blank" href="https://aemann2.github.io/product_landing/">Pizza Box Product
+            Page</a></h3>
         <p class="description-text">A product demo for Pizza Box, a fictional (sort of?) vending machine that serves
           pizzas. Mostly a means of showcasing layout and design, the page uses a fixed top-nav, CSS animations, and
           testimonial cards. </p>
@@ -88,6 +94,7 @@
       </figcaption>
     </figure>
   </section>
+
   <section id="about-me">
     <h2>About Me</h2>
     <div class="content-wrapper">
@@ -104,9 +111,12 @@
       </div>
     </div>
   </section>
+
   <section id="skills">
     <p>Looking for a resume? Click here</p>
     <button class="resume-button">Resume</button>
+    <p class="contact-email">Wanna hire me?</p>
+    <p class="contact-email">Get in touch at aemann2@gmail.com</p>
   </section>
 
   <footer id="contact">
@@ -117,18 +127,17 @@
           class="shape-fill"></path>
       </svg>
     </div>
-    <section id="contact-info">
-      <p class="contact-email">Wanna hire me?</p>
-      <p class="contact-email">Get in touch at aemann2@gmail.com</p>
+
+    <section class="contact-links">
+      <ul>
+        <li><a id="profile-link" href="https://github.com/aemann2" target="_blank"><img class="contact-img"
+              src="./images/github-ico.png" alt="HTML tutorial"></a></li>
+        <li><a href="https://www.linkedin.com/in/adam-mann-55365466/" target="_blank"><img class="contact-img"
+              src="./images/linkedin-ico.png" alt="HTML tutorial"></a></li>
+        <li><a href="https://codepen.io/aemann2" target="_blank"><img class="contact-img" src="./images/codepen-ico.png"
+              alt="HTML tutorial"></a></li>
+      </ul>
     </section>
-    <ul>
-      <li><a id="profile-link" href="https://github.com/aemann2" target="_blank"><img class="contact-img"
-            src="./images/github-ico.png" alt="HTML tutorial"></a></li>
-      <li><a href="https://www.linkedin.com/in/adam-mann-55365466/" target="_blank"><img class="contact-img"
-            src="./images/linkedin-ico.png" alt="HTML tutorial"></a></li>
-      <li><a href="https://codepen.io/aemann2" target="_blank">≈<img class="contact-img" src="./images/codepen-ico.png"
-            alt="HTML tutorial"></a></li>
-    </ul>
   </footer>
   <script>
     const navLinks = document.getElementById("nav-links");
@@ -142,7 +151,7 @@
     }
 
     function restoreNav() {
-      if (window.innerWidth > 500) {
+      if (window.innerWidth > 550) {
         navLinks.style.display = "flex";
       } else navLinks.style.display = "none";
     };

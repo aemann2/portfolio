@@ -139,14 +139,14 @@ body {
     border: none;
     font-size: 1.2em;
     padding: 14px 40px;
+    margin: 0 1em;
     background-color: $secondary-color;
-    transition: all 0.5s;
 
     .arrow-span {
       cursor: pointer;
       display: inline-block;
       position: relative;
-      transition: 0.5s;
+      transition: padding 0.5s;
 
       &:after {
         content: '\00bb';
@@ -154,7 +154,6 @@ body {
         opacity: 0;
         top: 0;
         right: -20px;
-        transition: 0.5s;
         color: $highlight-color;
       }
     }
@@ -174,6 +173,10 @@ body {
   }
 }
 
+.button-wrapper {
+  margin-bottom: 1em;
+}
+
 .project-tile {
   display: flex;
   padding-bottom: 8em;
@@ -181,7 +184,7 @@ body {
 }
 
 .desktop {
-  width: 48%;
+  width: 45vw;
   border: 8px solid black;
   border-radius: 6px;
   align-self: flex-end;
@@ -198,7 +201,7 @@ body {
 
 figcaption {
   flex-basis: 40%;
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   border: 4px solid black;
   border-radius: 6px;
   margin-left: 4em;
@@ -272,8 +275,9 @@ figcaption {
 }
 
 #skills {
+  background-color: $light-color;
   min-height: 20em;
-  margin-top: 4em;
+  padding-top: 4em;
   text-align: center;
 
   p {
@@ -324,41 +328,6 @@ figcaption {
   }
 }
 
-footer {
-  position: relative;
-  @extend %flex-end;
-  background: $primary-color;
-  height: 20em;
-  width: 100%;
-
-  ul {
-    display: flex;
-    list-style: none;
-  }
-
-  li {
-    margin-right: 2em;
-  }
-}
-
-#contact-info {
-  text-align: center;
-  position: absolute;
-  bottom: 1em;
-  left: 4em;
-  color: $light-color;
-  font-size: 1.5em;
-}
-
-.contact-img {
-  width: 10em;
-  transition: transform 0.4s;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
 // footer swoop
 
 .custom-shape-divider-top-1610406725 {
@@ -383,6 +352,32 @@ footer {
   fill: $light-color;
 }
 
+footer {
+  position: relative;
+  @extend %flex-end;
+  background: $primary-color;
+  height: 20em;
+  width: 100%;
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    margin-right: 2em;
+  }
+}
+
+.contact-img {
+  width: 10em;
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 // navbar animation
 
 @media only screen and (min-width: 500px) {
@@ -402,7 +397,7 @@ footer {
 
 // hamburger menu
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
   #navbar {
     position: relative;
     text-align: center;
@@ -419,14 +414,159 @@ footer {
   }
 
   #nav-links {
-    padding-bottom: 1em;
+    padding: 0;
+  }
+
+  .nav-link:after {
+    transition: none;
   }
 
   .icon {
     display: flex;
     justify-content: center;
-    margin-bottom: 0.2em;
-    margin-left: 0.6em;
+    margin: 0 auto 0.2em auto;
     font-size: 3.5em;
+  }
+
+  .nav–link:active:after,
+  .nav-link:focus:after,
+  .nav-link:hover:after,
+  .nav-link:visited:after {
+    opacity: 0;
+  }
+}
+
+// projects and welcome media queries
+
+@media only screen and (max-width: 1000px) {
+  .project-tile {
+    flex-direction: column;
+    justify-content: center;
+
+    figcaption {
+      order: -1;
+      font-size: 2vw;
+      margin: 0;
+    }
+
+    .desktop {
+      align-self: center;
+      width: 80vw;
+      margin: 3em 0 0 0;
+    }
+
+    .mobile {
+      margin-top: -28%;
+      width: 14vw;
+    }
+  }
+}
+
+// about me query
+
+@media only screen and (max-width: 850px) {
+  #about-me h2 {
+    font-size: 10vw;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1.5em;
+  }
+
+  .blurb-wrapper {
+    display: inline;
+    max-width: 100%;
+  }
+
+  .image-wrapper {
+    width: 80%;
+  }
+
+  #about-me img {
+    width: 80%;
+  }
+
+  .blurb-wrapper,
+  .image-wrapper {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #welcome-section {
+    flex-direction: column;
+    margin-bottom: 15em;
+
+    #welcome-left {
+      width: 100%;
+    }
+
+    #welcome-right {
+      margin-top: 1em;
+      order: -1;
+      background-color: $primary-color;
+      width: 100%;
+      text-align: center;
+
+      h1 {
+        font-size: 3em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        margin: -1em 0 1em 0;
+      }
+    }
+  }
+
+  #projects {
+    h2 {
+      font-size: 10vw;
+    }
+    padding: 1em 1em;
+  }
+
+  #projects button.github-button {
+    margin-bottom: 1em;
+  }
+
+  .project-tile {
+    padding: 0 0 4em 0;
+    margin: 0;
+
+    figcaption {
+      font-size: 4vw;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    .button-wrapper {
+      flex-direction: column;
+    }
+  }
+}
+
+// footer and skills media query
+@media only screen and (max-width: 650px) {
+  #skills {
+    font-size: 3vw;
+  }
+
+  footer {
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 3em 2em 1em;
+
+    li {
+      margin-right: 1em;
+    }
+  }
+
+  .contact-img {
+    width: 25vw;
   }
 }
