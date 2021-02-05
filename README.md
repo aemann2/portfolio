@@ -10,7 +10,7 @@ I'm not sure if I love the way the navbar looks...the text is a little hard to r
 
 ## Technology:
 
-HTML, CSS
+HTML, CSS, SASS
 
 ## What I learned or used for the first time:
 
