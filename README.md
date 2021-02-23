@@ -15,7 +15,7 @@ HTML, CSS, SASS
 ## What I learned or used for the first time:
 
 - **SASS**
-- **A costom favicon**
+- **A custom favicon**
 - **`Mix-blend-mode`**
 - **Autoplaying embedded video**
 - **Button animations**
