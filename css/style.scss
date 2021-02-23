@@ -285,45 +285,24 @@ figcaption {
   }
 
   // resume button
-  button {
+  .resume-button {
     font-size: 2em;
-    background: $secondary-color;
-    color: $light-color;
+    text-decoration: none;
+    padding: 1rem;
     border: 0.25rem solid $secondary-color;
-    padding: 0.85em 0.75em;
-    margin: 1rem;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
+    background-size: 100% 200%;
+    background-image: linear-gradient(
+      to bottom,
+      $secondary-color 50%,
+      $light-color 50%
+    );
+    transition: background-position 0.5s;
+    color: $light-color;
 
     &:hover {
       color: $secondary-color;
+      background-position: 0 100%;
       cursor: pointer;
-    }
-
-    &.resume-button::after {
-      left: 0;
-      right: 0;
-      top: 100%;
-      bottom: -100%;
-      transition: all 0.35s;
-    }
-
-    &.resume-button:hover::after {
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      transition: all 0.35s;
-    }
-
-    &::after {
-      content: '';
-      background: $light-color;
-      position: absolute;
-      z-index: -1;
-      padding: 0.85em 0.75em;
-      display: block;
     }
   }
 }

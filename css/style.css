@@ -323,48 +323,23 @@ figcaption {
   font-size: 2em;
 }
 
-#skills button {
+#skills .resume-button {
   font-size: 2em;
-  background: #476f93;
-  color: #f2f1eb;
+  text-decoration: none;
+  padding: 1rem;
   border: 0.25rem solid #476f93;
-  padding: 0.85em 0.75em;
-  margin: 1rem;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+  background-size: 100% 200%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #476f93), color-stop(50%, #f2f1eb));
+  background-image: linear-gradient(to bottom, #476f93 50%, #f2f1eb 50%);
+  -webkit-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+  color: #f2f1eb;
 }
 
-#skills button:hover {
+#skills .resume-button:hover {
   color: #476f93;
+  background-position: 0 100%;
   cursor: pointer;
-}
-
-#skills button.resume-button::after {
-  left: 0;
-  right: 0;
-  top: 100%;
-  bottom: -100%;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-}
-
-#skills button.resume-button:hover::after {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-}
-
-#skills button::after {
-  content: '';
-  background: #f2f1eb;
-  position: absolute;
-  z-index: -1;
-  padding: 0.85em 0.75em;
-  display: block;
 }
 
 .custom-shape-divider-top-1610406725 {
