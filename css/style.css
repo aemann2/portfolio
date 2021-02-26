@@ -52,6 +52,8 @@ body {
   font-size: 1.2em;
   font-weight: 400;
   mix-blend-mode: difference;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
 }
 
 #navbar ul {
@@ -59,7 +61,7 @@ body {
 }
 
 #navbar li {
-  margin: 1em;
+  margin: 0.3em 1em;
 }
 
 #navbar a {

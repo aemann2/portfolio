@@ -1,3 +1,5 @@
+// hamburger menu
+
 const navLinks = document.getElementById('nav-links');
 
 function hamburgerMenu() {
@@ -15,3 +17,17 @@ function restoreNav() {
 }
 
 window.addEventListener('resize', restoreNav);
+
+// navbar color transition
+
+const navbar = document.querySelector('#navbar');
+
+window.onscroll = () => {
+  if (window.scrollY > window.innerHeight - 50) {
+    navbar.style.backgroundColor = 'rgb(22, 39, 89)';
+    navbar.style.mixBlendMode = 'normal';
+  } else {
+    navbar.style.backgroundColor = '';
+    navbar.style.mixBlendMode = 'difference';
+  }
+};

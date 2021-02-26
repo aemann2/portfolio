@@ -45,6 +45,7 @@ body {
   font-size: 1.2em;
   font-weight: 400;
   mix-blend-mode: difference;
+  transition: background-color 0.3s ease-out;
 
   ul {
     @extend %flex-end;
@@ -52,7 +53,7 @@ body {
   }
 
   li {
-    margin: 1em;
+    margin: 0.3em 1em;
   }
 
   a {
