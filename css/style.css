@@ -282,6 +282,15 @@ figcaption {
           transform: scale(1.1);
 }
 
+#about-me .arrow-slider {
+  width: 20%;
+  margin: 0 -3rem 0 2em;
+}
+
+#about-me .arrow-slider:hover {
+  cursor: pointer;
+}
+
 .content-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

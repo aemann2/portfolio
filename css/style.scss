@@ -251,6 +251,15 @@ figcaption {
       transform: scale(1.1);
     }
   }
+
+  .arrow-slider {
+    width: 20%;
+    margin: 0 -3rem 0 2em;
+  }
+
+  .arrow-slider:hover {
+    cursor: pointer;
+  }
 }
 
 .content-wrapper {

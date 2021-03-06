@@ -31,3 +31,13 @@ window.onscroll = () => {
     navbar.style.mixBlendMode = 'difference';
   }
 };
+
+// photo slider
+
+const slider = document.querySelector('.arrow-slider');
+
+function sliderHandler() {
+  console.log('click');
+}
+
+slider.addEventListener('click', sliderHandler);
