@@ -265,7 +265,7 @@ figcaption {
 }
 
 #about-me img {
-  width: 60%;
+  width: 70%;
   border-radius: 30%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -284,7 +284,7 @@ figcaption {
 
 #about-me .arrow-slider {
   width: 20%;
-  margin: 0 -3rem 0 2em;
+  margin: 0 0rem 0 2em;
 }
 
 #about-me .arrow-slider:hover {
@@ -307,6 +307,9 @@ figcaption {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -511,6 +514,18 @@ footer li {
   }
   .image-wrapper {
     width: 80%;
+  }
+  #about-me .image-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about-me .arrow-slider {
+    margin-bottom: 1rem;
   }
   #about-me img {
     width: 80%;
