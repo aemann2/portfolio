@@ -42,6 +42,16 @@ body {
   background-color: #f2f1eb;
 }
 
+img {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+img[data-src] {
+  opacity: 0;
+}
+
 #navbar {
   position: fixed;
   width: 100%;
@@ -206,6 +216,9 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-right: 1em;
+  opacity: 1;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
 }
 
 .mobile {

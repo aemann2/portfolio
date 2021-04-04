@@ -35,6 +35,15 @@ body {
   background-color: $light-color;
 }
 
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+img[data-src] {
+  opacity: 0;
+}
+
 #navbar {
   position: fixed;
   width: 100%;
@@ -190,6 +199,8 @@ body {
   border-radius: 6px;
   align-self: flex-end;
   margin-right: 1em;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 
 .mobile {
