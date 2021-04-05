@@ -127,7 +127,7 @@ img[data-src] {
     h2 {
       font-size: 2vw;
       margin-top: -2em;
-      margin-left: 2em;
+      margin-left: 3em;
     }
   }
 }
@@ -199,8 +199,6 @@ img[data-src] {
   border-radius: 6px;
   align-self: flex-end;
   margin-right: 1em;
-  opacity: 1;
-  transition: opacity 1s linear;
 }
 
 .mobile {

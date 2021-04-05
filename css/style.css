@@ -142,7 +142,7 @@ img[data-src] {
 #welcome-section #welcome-right h2 {
   font-size: 2vw;
   margin-top: -2em;
-  margin-left: 2em;
+  margin-left: 3em;
 }
 
 #projects {
@@ -216,9 +216,6 @@ img[data-src] {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-right: 1em;
-  opacity: 1;
-  -webkit-transition: opacity 1s linear;
-  transition: opacity 1s linear;
 }
 
 .mobile {
