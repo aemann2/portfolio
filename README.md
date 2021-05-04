@@ -1,5 +1,7 @@
 # [Portfolio](https://aemann2.github.io/portfolio/)
 
+<a href="https://aemann2.github.io/portfolio/" target="_blank"><img src='https://user-images.githubusercontent.com/68879246/117073761-3b76db00-ace7-11eb-8b54-150bc5596e95.png' alt="Adam Mann's Portfolio"></a>
+
 A portfolio for my projects. Not every project is included here -- I've focused on the work I think is most unique, and I've tried to vary the types of projects I've included. It's a work in progress and I'll be adding to it as I apply for jobs and beyond.
 
 ## Background:
